@@ -36,13 +36,26 @@
 // console.log(emptyArr);
 // console.log(emptyArr.length);
 
-var arr = ['a','b','c'];
+// var arr = ['a','b','c'];
+// arr.push('three');
+// console.log(arr);
+// arr.length = 5;
+// arr.push('four');
+// console.log(arr);
 
-arr.push('three');
-console.log(arr);
+//add() 함수 표현식
+// var add = function(x, y){
+//     return x + y ;
+// };
+// var plus = add;
+// console.log(add(3,4));
+// console.log(plus(5,5));
 
-arr.length = 5;
+//함수 표현식  + 함수 호이스팅
+//console.log(add(2,3));
 
-arr.push('four');
-console.log(arr);
+var add = function(x, y){
+    return x + y;
+};
 
+console.log(add(3,4));
