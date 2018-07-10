@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FE_study
 
 ## 1. ES6
@@ -48,3 +49,8 @@
 
 ## 7. LINT
 * blah blah blah
+=======
+* asdjknasjkdnakjsd
+ * asdkjnaskdjnaksd
+  * asdkjnaksdjasd
+>>>>>>> 0c6d94fe1aff981ccefe4ef552ad7eb9bc977377
