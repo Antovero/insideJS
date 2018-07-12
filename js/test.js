@@ -103,8 +103,48 @@
 // console.dir(add);
 
 //MyFunction() 함수 정의
-function myFuntion(){
-    return true;
-}
+// function myFuntion(){
+//     return true;
+// }
 
-console.dir(myFuntion.prototype);
+// console.dir(myFuntion.prototype);
+
+//클로저 예제
+// function parent(){
+//     var a = 100;
+//     var child = function(){
+//         console.log(a);
+//     }
+//     return child;
+// }
+// var inner = parent();
+// inner();
+
+// var self = function(){
+//     console.log('a');
+//     return function(){
+//         console.log('b');
+//     }
+// }
+
+// self = self();
+// self();
+
+
+//객체의 메서드 호출 시 this 바인딩
+var myObject = {
+    name: 'foo',
+    sayName: function(){
+        console.log(this.name);
+    }
+};
+
+var otherObject = {
+    name: 'bar'
+};
+
+otherObject.sayName = myObject.sayName;
+
+myObject.sayName();
+otherObject.sayName();
+
