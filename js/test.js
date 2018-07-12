@@ -148,3 +148,4 @@ otherObject.sayName = myObject.sayName;
 myObject.sayName();
 otherObject.sayName();
 
+a
