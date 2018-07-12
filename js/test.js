@@ -54,8 +54,57 @@
 //함수 표현식  + 함수 호이스팅
 //console.log(add(2,3));
 
-var add = function(x, y){
-    return x + y;
-};
+// var add = function(x, y){
+//     return x + y;
+// };
 
-console.log(add(3,4));
+// console.log(add(3,4));
+
+
+//함수 선언 방식으로 add()함수 정의
+// function add(x, y){
+//     return x+y;
+// }
+// add.result = add(3, 2);
+// add.status = 'OK';
+// console.log(add.result);
+// console.log(add.status);
+
+// var foo = 100;
+// var bar = function(){
+//     return 100;
+// };
+// console.log(bar());
+// var obj = {};
+// obj.baz = function(){ return 200; }
+// console.log(obj.baz());
+
+
+//함수를 다른 함수의 인자로 넘기는 코드
+// var foo = function(func){
+//     func();
+// };
+// foo(function(){
+//     console.log('function!!!');
+// });
+
+//함수를 리턴하는 foo() 함수 정의
+// var foo = function(){
+//     return function(){
+//         console.log('this function is the return value.');
+//     };
+// };
+// var bar = foo();
+// bar();
+
+// function add(x, y){
+//     return x + y;
+// }
+// console.dir(add);
+
+//MyFunction() 함수 정의
+function myFuntion(){
+    return true;
+}
+
+console.dir(myFuntion.prototype);
