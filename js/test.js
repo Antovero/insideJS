@@ -107,13 +107,4 @@ function myFuntion(){
     return true;
 }
 
-<<<<<<< HEAD
 console.dir(myFuntion.prototype);
-=======
-console.log(add(3,4));
-
-ssss
-asdasdada
-askdjnkasjdbnasjkdnbasjhdnbasjhdasjhdbasjdhbasdjhbasd
-ashjkdbjashdnbajshdbaj
->>>>>>> b783436ab59fcb26584d1e287c2f411b4ae66065
