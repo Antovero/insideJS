@@ -132,20 +132,42 @@
 
 
 //객체의 메서드 호출 시 this 바인딩
+// var myObject = {
+//     name: 'foo',
+//     sayName: function(){
+//         console.log(this.name);
+//     }
+// };
+// var otherObject = {
+//     name: 'bar'
+// };
+// otherObject.sayName = myObject.sayName;
+// myObject.sayName();
+// otherObject.sayName();
+
+
+//전역 변수 value 정의
+var value = 100;
+
+//myObject 객체 생성
 var myObject = {
-    name: 'foo',
-    sayName: function(){
-        console.log(this.name);
+    value: 1,
+    func1: function(){
+        var that = this;
+        this.value += 1;
+        console.log('func1() called. this.value : ' + this.value);
+        
+        func2 = function(){
+            that.value += 1;
+            console.log('func2() called. this.value : ' + that.value);
+            
+            func3 = function(){
+                that.value += 1;
+                console.log('func3() called. this.value : ' + that.value);
+            }
+            func3();
+        }
+        func2();
     }
 };
-
-var otherObject = {
-    name: 'bar'
-};
-
-otherObject.sayName = myObject.sayName;
-
-myObject.sayName();
-otherObject.sayName();
-
-a
+myObject.func1();
