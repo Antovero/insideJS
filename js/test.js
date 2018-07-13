@@ -103,8 +103,43 @@
 // console.dir(add);
 
 //MyFunction() 함수 정의
-function myFuntion(){
-    return true;
+// function myFuntion(){
+//     return true;
+// }
+
+// console.dir(myFuntion.prototype);
+
+//즉시 실행 함수 패턴
+// (function(name){
+//     console.log('HELLO ' + name);
+// })('DSE');
+
+
+//내부 함수 코드 (스코프)
+// function parent(){
+//     var a = 100;
+//     var b = 200;
+
+//     //child() 내부 함수 정의
+//     function child(){
+//         var b = 300;
+//         console.log(a);
+//         console.log(b);
+//     }
+//     child();
+// }
+// parent();
+// child();
+
+
+//함수 스코프 외부에서 내부 함수 호출하는 예제 코드 (스코프)
+function parent(){
+    var a = 100;
+    var child = function(){
+        console.log(a);
+    }
+    return child;
 }
 
-console.dir(myFuntion.prototype);
+var inner = parent();
+inner();
