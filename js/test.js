@@ -109,37 +109,43 @@
 
 // console.dir(myFuntion.prototype);
 
-//즉시 실행 함수 패턴
-// (function(name){
-//     console.log('HELLO ' + name);
-// })('DSE');
-
-
-//내부 함수 코드 (스코프)
+//클로저 예제
 // function parent(){
 //     var a = 100;
-//     var b = 200;
-
-//     //child() 내부 함수 정의
-//     function child(){
-//         var b = 300;
+//     var child = function(){
 //         console.log(a);
-//         console.log(b);
 //     }
-//     child();
+//     return child;
 // }
-// parent();
-// child();
+// var inner = parent();
+// inner();
+
+// var self = function(){
+//     console.log('a');
+//     return function(){
+//         console.log('b');
+//     }
+// }
+
+// self = self();
+// self();
 
 
-//함수 스코프 외부에서 내부 함수 호출하는 예제 코드 (스코프)
-function parent(){
-    var a = 100;
-    var child = function(){
-        console.log(a);
+//객체의 메서드 호출 시 this 바인딩
+var myObject = {
+    name: 'foo',
+    sayName: function(){
+        console.log(this.name);
     }
-    return child;
-}
+};
 
-var inner = parent();
-inner();
+var otherObject = {
+    name: 'bar'
+};
+
+otherObject.sayName = myObject.sayName;
+
+myObject.sayName();
+otherObject.sayName();
+
+a
