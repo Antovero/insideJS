@@ -171,3 +171,6 @@ var myObject = {
     }
 };
 myObject.func1();
+
+//aaaa
+
